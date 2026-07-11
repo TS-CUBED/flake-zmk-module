@@ -119,6 +119,28 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
     };
 
     keymap {
@@ -126,11 +148,11 @@
 
         base {
             bindings = <
-&kp ESC    &kp N1         &kp N2          &kp N3           &kp N4           &kp N5    &kp N6      &kp N7            &kp N8            &kp N9           &kp N0            &kp MINUS
-&kp ENTER  &kp Q          &kp W           &kp E            &kp R            &kp T     &kp Y       &kp U             &kp I             &kp O            &kp P             &kp BSPC
-&kp TAB    &mt LGUI A     &mt LALT S      &mt LCTRL D      &mt LSHIFT F     &kp G     &kp H       &mt RSHIFT J      &mt RCTRL K       &mt LALT L       &mt LGUI SEMI     &kp APOS
-&kp LBKT   &kp Z          &kp X           &kp C            &kp V            &kp B     &kp N       &kp M             &kp COMMA         &kp DOT          &kp FSLH          &kp RBKT
-           &kp LGUI       &kp LALT        &kp LCTRL        &mo 1            &kp SPACE &kp ENTER   &mo 2           &kp LGUI          &kp LAL          &kp LCTRL
+&kp ESC    &kp N1          &kp N2         &kp N3          &kp N4          &kp N5         &kp N6      &kp N7            &kp N8            &kp N9           &kp N0            &kp MINUS
+&kp ENTER  &kp Q           &kp W          &kp E           &kp R           &kp T          &kp Y       &kp U             &kp I             &kp O            &kp P             &kp BSPC
+&kp TAB    &hml LGUI A     &hml LALT S    &hml LCTRL D    &hml LSHIFT F   &kp G          &kp H       &hmr RSHIFT J     &hmr RCTRL K      &hmr LALT L      &hmr LGUI SEMI          &kp APOS
+&kp LBKT   &kp Z           &kp X          &kp C           &kp V           &kp B          &kp N       &kp M             &kp COMMA         &kp DOT          &kp FSLH          &kp RBKT
+           &kp LGUI        &kp LALT       &kp LCTRL       &mo 1           &kp SPACE      &kp ENTER   &mo 2             &kp LGUI          &kp LAL          &kp LCTRL
             >;
         };
 
