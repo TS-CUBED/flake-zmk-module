@@ -158,10 +158,10 @@
 
         nav {
             bindings = <
-&trans  &kp PSCRN  &kp HOME       &kp PAGE_UP   &kp PAUSE  &none                        &none           &none   &none   &kp C_VOL_UP  &kp C_VOL_UP     &kp C_MUTE
-&trans  &kp SLCK   &kp END        &kp PAGE_DOWN &kp DEL    &kp caps_word                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp C_PREV  &kp C_NEXT
-&trans  &kp LGUI   &kp LALT       &kp LCTRL     &kp LSHFT  &kp LBKT                     &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp N0      &none
-&none   &kp UNDO   &kp CUT        &kp COPY      &kp PASTE  &kp REDO                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mmv MB4    &mmv MB5
+&trans  &kp PSCRN  &kp HOME       &kp PAGE_UP   &kp PAUSE  &none                        &none           &none           &none         &kp C_VOL_UP     &kp C_VOL_UP  &kp C_MUTE
+&trans  &kp SLCK   &kp END        &kp PAGE_DOWN &kp DEL    &kp caps_word                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp C_PREV    &kp C_NEXT
+&trans  &kp LGUI   &kp LALT       &kp LCTRL     &kp LSHFT  &kp LBKT                     &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp N0        &none
+&none   &kp UNDO   &kp CUT        &kp COPY      &kp PASTE  &kp REDO                     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mmv MB4      &mmv MB5
         &trans     &trans         &trans        &trans     &trans                       &mmv MB1        &mmv MB2        &mmv MB3      &mmv MB4         &mmv MB5
             >;
         };
